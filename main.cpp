@@ -48,5 +48,19 @@ int main() {
 	cout << "Maximo dedutivel: " << dedutivel << endl;
 	cout << "Gastos dedutiveis: " << gastototal << endl;
 	
+	//RESUMO
+	double abatimento, ImpostoDevido;
+	
+	if(gastototal > dedutivel){
+		abatimento = dedutivel;
+	}else {
+		abatimento = gastototal;
+	}
+	ImpostoDevido = totalImpostos - abatimento;
+	
+	cout << endl << "RESUMO: " << endl;
+	cout << "Imposto bruto total: " << totalImpostos << endl;
+	cout << "Abatimento: " << abatimento << endl;
+	cout << "Imposto devido: " << ImpostoDevido;
 	return 0;
 }
