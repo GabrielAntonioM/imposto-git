@@ -19,7 +19,7 @@ int main() {
 	cout << endl;
 	cout << "RELATORIO DE IMPOSTO DE RENDA" << endl;
 	cout << endl;
-	// CONSOLIDADO CALCULOS
+	// CONSOLIDADO CALCULOS E IMPRESSAO	
 	cout << "CONSOLIDADO DE RENDA:" << endl;
 	double Salario, RSimposto, RPimposto, RCimposto;
 	Salario = rendaSala/12.00;
@@ -37,6 +37,16 @@ int main() {
 	
 	RCimposto = rendaCapital * 0.2;
 	cout << "Imposto sobre ganho de capital: " << RCimposto << endl;
+	
+	//DEDUCOES
+	double dedutivel, totalImpostos, gastototal;
+	totalImpostos = RSimposto + RPimposto + RCimposto;
+	dedutivel = totalImpostos * 0.3;
+	gastototal = gMedico + gEduca;
+	cout << endl;
+	cout << "DEDUCOES: "<< endl;
+	cout << "Maximo dedutivel: " << dedutivel << endl;
+	cout << "Gastos dedutiveis: " << gastototal << endl;
 	
 	return 0;
 }
